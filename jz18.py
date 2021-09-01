@@ -2,8 +2,4 @@
 
 class Solution:
     def printNumbers(self, n: int) -> List[int]:
-        limit = 0
-        while n > 0:
-            limit = limit * 10 + 9
-            n -= 1
-        return [_ for _ in range(1, limit + 1)]
+        return range(1, 10**n)
