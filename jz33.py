@@ -3,7 +3,7 @@
 class Solution:
     def verifyPostorder(self, postorder: List[int]) -> bool:
         n = len(postorder)
-        if n == 0:
+        if n < 2:
             return True
         i = 0
         while i < n - 1:
