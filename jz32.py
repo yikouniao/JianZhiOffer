@@ -9,4 +9,15 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[int]:
-        pass    
+        result = []
+        if not root:
+            return result
+        queue = [root]
+        while queue:
+            p = queue.pop(0)
+            result.append(p.val)
+            if p.left:
+                queue.append(p.left)
+            if p.right:
+                queue.append(p.right)
+        return result
